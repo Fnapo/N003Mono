@@ -17,4 +17,5 @@ import { Ema, EmaSchema } from './emas/entities/ema.entity';
       { name: Entidad.name, schema: EntidadSchema },
     ]),],
 })
+
 export class MisEntidadesModule { }
