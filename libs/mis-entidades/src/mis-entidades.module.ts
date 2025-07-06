@@ -20,4 +20,5 @@ import { CentrosModule } from './centro/centro.module';
     CentrosModule,
     EmasModule,]
 })
+
 export class MisEntidadesModule { }
