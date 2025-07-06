@@ -12,7 +12,7 @@ import { EntidadService } from './entidad.service';
 import { CreateEntidadDto } from './dto/create-entidad.dto';
 import { UpdateEntidadDto } from './dto/update-entidad.dto';
 
-@Controller('entidad')
+@Controller('entidades')
 export class EntidadController {
   constructor(private readonly entidadService: EntidadService) { }
 
@@ -28,16 +28,16 @@ export class EntidadController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.entidadService.findOne(+id);
+    return this.entidadService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateEntidadDto: UpdateEntidadDto) {
-    return this.entidadService.update(+id, updateEntidadDto);
+    return this.entidadService.update(id, updateEntidadDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.entidadService.remove(+id);
+    return this.entidadService.remove(id);
   }
 }

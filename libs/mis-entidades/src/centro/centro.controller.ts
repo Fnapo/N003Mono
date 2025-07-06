@@ -1,11 +1,11 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { CentrosService } from './centros.service';
+import { CentrosService } from './centro.service';
 import { CreateCentroDto } from './dto/create-centro.dto';
 import { UpdateCentroDto } from './dto/update-centro.dto';
 
 @Controller('centros')
 export class CentrosController {
-  constructor(private readonly centrosService: CentrosService) {}
+  constructor(private readonly centrosService: CentrosService) { }
 
   @Post()
   create(@Body() createCentroDto: CreateCentroDto) {
@@ -19,16 +19,16 @@ export class CentrosController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.centrosService.findOne(+id);
+    return this.centrosService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateCentroDto: UpdateCentroDto) {
-    return this.centrosService.update(+id, updateCentroDto);
+    return this.centrosService.update(id, updateCentroDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.centrosService.remove(+id);
+    return this.centrosService.remove(id);
   }
 }

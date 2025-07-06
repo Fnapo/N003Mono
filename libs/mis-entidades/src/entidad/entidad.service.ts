@@ -12,15 +12,15 @@ export class EntidadService {
     return `This action returns all entidad`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} entidad`;
   }
 
-  update(id: number, updateEntidadDto: UpdateEntidadDto) {
+  update(id: string, updateEntidadDto: UpdateEntidadDto) {
     return `This action updates a #${id} entidad`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} entidad`;
   }
 }

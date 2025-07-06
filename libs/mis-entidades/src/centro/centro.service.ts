@@ -12,15 +12,15 @@ export class CentrosService {
     return `This action returns all centros`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} centro`;
   }
 
-  update(id: number, updateCentroDto: UpdateCentroDto) {
+  update(id: string, updateCentroDto: UpdateCentroDto) {
     return `This action updates a #${id} centro`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} centro`;
   }
 }

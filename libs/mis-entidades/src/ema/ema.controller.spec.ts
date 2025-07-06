@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EmasController } from './emas.controller';
-import { EmasService } from './emas.service';
+import { EmasController } from './ema.controller';
+import { EmasService } from './ema.service';
 
 describe('EmasController', () => {
   let controller: EmasController;

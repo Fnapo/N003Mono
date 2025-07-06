@@ -12,15 +12,15 @@ export class EmasService {
     return `This action returns all emas`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} ema`;
   }
 
-  update(id: number, updateEmaDto: UpdateEmaDto) {
+  update(id: string, updateEmaDto: UpdateEmaDto) {
     return `This action updates a #${id} ema`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} ema`;
   }
 }
